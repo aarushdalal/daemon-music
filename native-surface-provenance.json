@@ -1,0 +1,13 @@
+{
+  "source": "Omarchy shell/Ui/KeyboardPanel.qml",
+  "source_sha256": "070c0bad8a1f53b85ae3265b6cc1f68ca50cc1adb06712156ca9889cd6545629",
+  "base_git_revision": "13f18b2cb7286fb54f87daf571a031aa6af3d8f0",
+  "license_file": "LICENSE.omarchy",
+  "license_source": "git HEAD:LICENSE and https://github.com/omacom/omarchy/blob/quattro/LICENSE",
+  "changes": [
+    "Import native qs.Ui for existing controls.",
+    "Expose per-panel surfaceColor from existing Color.menu.background; preserve machine popup alpha0.94.",
+    "Center fallback when real bar anchor unavailable."
+  ],
+  "upgrade_strategy": "Compare source hash, rebase/review this narrow patch on change; never edit packaged files or global Theme."
+}

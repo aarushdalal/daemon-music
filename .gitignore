@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.key
+daemon-music-session.js
+.local/
+backups/
+work/

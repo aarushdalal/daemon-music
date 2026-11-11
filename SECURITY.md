@@ -1,0 +1,1 @@
+Report security issues through GitHub private vulnerability reporting when available; otherwise open a minimal issue without credentials or private session data. Never attach pairing keys, browser tokens, user scenes or full-desktop screenshots. This plugin runs in an unsandboxed user shell; inspect code before enabling.

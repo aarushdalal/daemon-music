@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "daemon0.music",
+  "name": "DAEMON Music",
+  "version": "0.2.0",
+  "author": "Daemon0",
+  "description": "Explicitly bound MPRIS playback with capability-aware Spotify library and queue integration",
+  "kinds": [
+    "panel",
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "panel": "Panel.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "DAEMON Music",
+    "description": "Music library, queue and targeted playback",
+    "category": "Audio",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,37 @@
+--- native/KeyboardPanel.qml
++++ MusicKeyboardPanel.qml
+@@ -2,6 +2,8 @@
+ import Quickshell
+ import Quickshell.Wayland
+ import qs.Commons
++import qs.Commons as OmarchyPalette
++import qs.Ui
+ 
+ // Layer-shell popup attached to a bar widget icon, designed for
+ // click-driven AND keyboard-driven panels (e.g. SUPER+CTRL+W summon).
+@@ -45,6 +47,7 @@
+   property int contentWidth: Style.space(280)
+   property int contentHeight: Style.space(200)
+   property var borderSpec: Border.none()
++  property color surfaceColor: OmarchyPalette.Color.menu.background
+   property bool centerOnBar: false
+   property bool open: false
+   property int gap: Style.gapsOut  // distance between bar edge and panel
+@@ -192,7 +195,7 @@
+   readonly property real barW: anchorWindow ? anchorWindow.width : screenW
+   readonly property real barH: anchorWindow ? anchorWindow.height : 0
+   readonly property point cardOrigin: {
+-    if (!anchorItem || !bar) return Qt.point(margin, margin)
++    if (!anchorItem || !bar) return Qt.point(Math.max(margin, Math.round((screenW-contentWidth)/2)), Math.max(margin, Math.round((screenH-contentHeight)/2)))
+     var x = 0, y = 0
+     if (centerOnBar && (barPos === "top" || barPos === "bottom")) {
+       x = screenW / 2 - contentWidth / 2
+@@ -382,7 +385,7 @@
+     y: root.cardOrigin.y + (root.open || root.popoutSwitching ? 0 : ((root.barPos === "bottom") ? 14 : -14))
+     width: root.contentWidth
+     height: root.contentHeight
+-    color: Theme.surface
++    color: root.surfaceColor
+     borderSpec: (root.borderSpec && root.borderSpec.type !== "none") ? root.borderSpec : Border.surfaceSpec("popups", "border", Theme.borderSubtle, 1)
+     padding: root.padding
+     radius: Theme.radiusLarge

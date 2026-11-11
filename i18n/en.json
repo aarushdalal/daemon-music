@@ -1,0 +1,11 @@
+{
+  "title": "DAEMON Music",
+  "bind_session": "Bind this provider to an exact player session",
+  "no_player": "No bound player is available. Open the provider, then bind its session.",
+  "browser_limit": "Browser sessions do not identify a music service reliably. Bind the session you started explicitly.",
+  "bridge_limit": "Spotify library and queue require the connected local extension.",
+  "unsupported_library": "Library browsing is unavailable for this provider; its bound player supports the controls shown above.",
+  "search": "Filter loaded playlists or tracks\u2026",
+  "spotify_binding": "Spotify requires the exact org.mpris.MediaPlayer2.spotify session.",
+  "provider_drift": "That session reports a media URL from a different service. Controls are disabled."
+}

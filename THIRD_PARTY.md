@@ -1,0 +1,1 @@
+The local MusicKeyboardPanel.qml is a modified Omarchy KeyboardPanel (MIT), base revision13f18b2cb7286fb54f87daf571a031aa6af3d8f0. See LICENSE.omarchy. Native qs.Ui/qs.Commons are supplied by the installed Omarchy shell and are not bundled. Local changes retain native theme tokens, keyboard focus and anchored panel placement.
